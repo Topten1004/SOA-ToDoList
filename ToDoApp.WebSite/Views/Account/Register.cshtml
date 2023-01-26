@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="well max-width768">
+    <h3>Register</h3>
+    <hr>
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" name="Name" maxlength="50" class="form-control">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <label for="">Surname</label>
+                    <input type="text" name="Surname" maxlength="50" class="form-control">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" name="Email" maxlength="250" class="form-control">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="Password" maxlength="12" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+            <button type="submit" class="btn btn-success pull-right">Submit</button>
+        </div>
+    }
+</div>
+    

@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>To Do List App!</h2>
+    <p>This is a simple SOA based Asp.Net MVC to-do list application.</p>
+</div>
+<div class="todolist-wrap">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-aqua">
+                <div class="box-header ui-sortable-handle" style="cursor: move;">
+                    <i class="ion ion-clipboard"></i>
+                    <h3 class="box-title">To Do List</h3>
+                </div>
+
+                <div class="box-body">
+                    <ul class="todo-list" id="groupList">
+                        <!-- filled by js -->
+                    </ul>
+                </div>
+                <div class="box-footer clearfix no-border">
+                    <button type="button" class="btn btn-default pull-right" id="addItemGroup"><i class="fa fa-plus"></i> Add item</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 hidden" id="listBlock">
+            <div class="box box-green">
+                <div class="box-header ui-sortable-handle" style="cursor: move;">
+                    <i class="ion ion-clipboard"></i>
+                    <h3 class="box-title">Tasks</h3>
+                </div>
+
+                <div class="box-body">
+                    <ul class="todo-list" id="list">
+                        <!-- filled by js -->
+                    </ul>
+                </div>
+                <div class="box-footer clearfix no-border">
+                    <button type="button" class="btn btn-default pull-right" id="addItemList"><i class="fa fa-plus"></i> Add item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_ModalPartial")
